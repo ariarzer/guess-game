@@ -13,10 +13,21 @@ Vue.component('registration-form', {
       countTextArea: 1};
     },
   methods: {
+    areEmpty: function(){
+      for(var i = 0; i < this.score.length; i++){
+        if(this.score[i].name == ''){
+          alert('Fill out the empty input fields first!');
+          return true;
+        }
+      }
+      return false;
+    },
     exit: function() {
-       this.$emit('i-finish');
+      if(this.areEmpty()) {return 0;}
+      this.$emit('i-finish');
     },
     addTextArea: function() {
+      if(this.areEmpty()) return 0;
       if(this.countTextArea < 4) {
         this.score.push({id: this.countTextArea, name: '', report: []});
         this.countTextArea++;
