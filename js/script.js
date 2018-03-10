@@ -1,12 +1,12 @@
 Vue.component('registration-form', {
   props: ['score'],
   template: '\
-    <div id="registration-form"> \
-      <div id="registration-input"> \
+    <div> \
+      <div> \
         <input v-for="item in score" v-model="item.name" v-bind:key="item.id" type="text" placeholder="What is your name?"> \
       </div> \
-      <button id="button-add-test-area" v-on:click="addTextArea()">+</button> \
-      <button id="button-registration-end" v-on:click="exit()">start!</button> \
+      <button v-on:click="addTextArea()">+</button> \
+      <button v-on:click="exit()">start!</button> \
     </div>',
   data: function () {
     return {
@@ -42,15 +42,14 @@ Vue.component('registration-form', {
 Vue.component('answer-item', {
   props: ['answer', 'scoreItem', 'answerIndex'],
   template: ' \
-    <div id="answer-item"> \
+    <div> \
       Answer for {{scoreItem.name}} \
-      <div id="quetion"> \
+      <div> \
         {{answer.quetion}} \
       </div> \
       <div id="answer-list"> \
         <button \
           v-for="(item, index) in answer.answers" \
-          v-bind:id="getButtonId(index)" \
           v-on:click="response(index)" \
         > \
           {{item}} \
@@ -69,7 +68,7 @@ Vue.component('answer-item', {
 Vue.component('answering-form', {
   props: ['score','answer'],
   template: ' \
-    <div id="answering-form"> \
+    <div> \
       <div v-for="(item, index) in answer"> \
         <answer-item \
           v-bind:answer=item \
@@ -104,7 +103,7 @@ Vue.component('answering-form', {
 Vue.component('showing-results', {
   props: ['score', 'answer'],
   template: ' \
-    <div id="results"> \
+    <div> \
       <div v-for="team in score"> \
         {{team.name}} \
         <div v-for="score in team.report"> \
