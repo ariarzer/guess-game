@@ -113,10 +113,12 @@ Vue.component('answering-form', {
 Vue.component('showing-results', {
   props: ['score', 'answer'],
   template: ' \
-    <div> \
+    <div class="results"> \
       <div v-for="team in score"> \
-        {{team.name}} \
-        <div v-for="score in team.report"> \
+        <div class="main-design vertica-centering"> \
+          {{team.name}} \
+        </div> \
+        <div v-for="score in team.report" class="main-design vertica-centering"> \
           {{answer[score.answerIndex].quetion}} : {{score.right}} \
         </div> \
       </div> \
