@@ -6,4 +6,51 @@ body{
   justify-content: center;
   align-items: center;
   font-family: Arial;
+
+}
+
+button::-moz-focus-inner {
+  border: 0 !important;
+}
+
+.main-design{
+  background: #5BBBE4;
+  color: white;
+  border: 3px solid white;
+  font-size: 20px;
+}
+
+.guess-game{
+
+}
+
+.registr{
+  display: flex;
+  font-size: 170px;
+  --rarefaction: 10px;
+}
+
+.registr_inputs{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-text{
+  margin: var(--rarefaction);
+  padding: 5px;
+}
+
+.registr_button{
+  margin: var(--rarefaction);
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+
+.registr_create-button{
+  font-size: 25px;
+}
+
+
+.registr_start-button{
+
 }

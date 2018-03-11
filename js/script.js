@@ -1,12 +1,19 @@
 Vue.component('registration-form', {
   props: ['score'],
   template: '\
-    <div> \
-      <div> \
-        <input v-for="item in score" v-model="item.name" v-bind:key="item.id" type="text" placeholder="What is your name?"> \
+    <div class="registr"> \
+      <div class="registr_inputs"> \
+        <input \
+          v-for="item in score" \
+          v-model="item.name" \
+          v-bind:key="item.id" \
+          type="text" \
+          placeholder="What is your name?" \
+          class="input-text main-design" \
+        > \
       </div> \
-      <button v-on:click="addTextArea()">+</button> \
-      <button v-on:click="exit()">start!</button> \
+      <button v-on:click="addTextArea()" class="registr_create-button main-design registr_button">+</button> \
+      <button v-on:click="exit()" class="registr_start-button main-design registr_button">start!</button> \
     </div>',
   data: function () {
     return {
