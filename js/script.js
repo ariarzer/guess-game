@@ -12,8 +12,8 @@ Vue.component('registration-form', {
           class="input-text main-design" \
         > \
       </div> \
-      <button v-on:click="addTextArea()" class="registr_create-button main-design basic-button">+</button> \
-      <button v-on:click="exit()" class="registr_start-button main-design basic-button">start!</button> \
+      <button v-on:click="addTextArea()" class="registr_create-button basic-button main-design">+</button> \
+      <button v-on:click="exit()" class="registr_start-button basic-button main-design ">start!</button> \
     </div>',
   data: function () {
     return {
@@ -116,13 +116,19 @@ Vue.component('showing-results', {
     <div class="results"> \
       <div v-for="team in score"> \
         <div class="main-design vertica-centering"> \
-          {{team.name}} \
-        </div> \
-        <div v-for="score in team.report" class="main-design vertica-centering"> \
-          {{answer[score.answerIndex].quetion}} : {{score.right}} \
+          {{team.name}} : {{result(team)}} from {{team.report.length}}\
         </div> \
       </div> \
-    </div>'
+    </div>',
+  methods: {
+    result: function (team) {
+      var result = 0;
+      for(var i = 0; i < team.report.length; i++){
+        result += team.report[i].right;
+      }
+      return result;
+    },
+  },
 })
 
 var basic = new Vue({
