@@ -130,28 +130,7 @@ var basic = new Vue({
   data: {
     render: [true, false, false],
     score: [{id: 0, name: '', report: []}],
-    answer: [
-      {
-        quetion: "what1??",
-        answers: [
-          'answer1_1',
-          'answer1_2',
-          'answer1_3',
-          'answer1_4',
-        ],
-        trueAnswerIndex: 1,
-      },
-      {
-        quetion: "what2??",
-        answers: [
-          'answer2_1',
-          'answer2_2',
-          'answer2_3',
-          'answer2_4',
-        ],
-        trueAnswerIndex: 3,
-      }
-    ],
+    answer: quetion,
   },
   methods: {
     renderStep: function(i) {
