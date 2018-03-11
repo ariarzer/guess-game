@@ -1,5 +1,5 @@
 body{
-  background: linear-gradient(to top right, #0DB3E3, #0D11E3);
+  background-image: url("../images/night.png");
   height: 100vh;
   margin: 0px;
   display: flex;
