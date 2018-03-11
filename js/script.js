@@ -8,7 +8,7 @@ Vue.component('registration-form', {
           v-model="item.name" \
           v-bind:key="item.id" \
           type="text" \
-          placeholder="What is your name?" \
+          placeholder="What is your name?..." \
           class="input-text main-design" \
         > \
       </div> \
@@ -51,7 +51,7 @@ Vue.component('answer-item', {
   template: ' \
     <div class="answering"> \
       <div class="main-design vertica-centering"> \
-        Answer for {{scoreItem.name}} \
+        Вопрос для "{{scoreItem.name}}": \
       </div> \
       <div class="main-design vertica-centering"> \
         {{answer.quetion}} \
@@ -116,7 +116,7 @@ Vue.component('showing-results', {
     <div class="results"> \
       <div v-for="team in score"> \
         <div class="main-design vertica-centering"> \
-          {{team.name}} : {{result(team)}} from {{team.report.length}}\
+          {{team.name}} : {{result(team)}} из {{team.report.length}}\
         </div> \
       </div> \
     </div>',
