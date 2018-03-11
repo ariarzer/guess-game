@@ -12,8 +12,8 @@ Vue.component('registration-form', {
           class="input-text main-design" \
         > \
       </div> \
-      <button v-on:click="addTextArea()" class="registr_create-button main-design registr_button">+</button> \
-      <button v-on:click="exit()" class="registr_start-button main-design registr_button">start!</button> \
+      <button v-on:click="addTextArea()" class="registr_create-button main-design basic-button">+</button> \
+      <button v-on:click="exit()" class="registr_start-button main-design basic-button">start!</button> \
     </div>',
   data: function () {
     return {
@@ -49,15 +49,18 @@ Vue.component('registration-form', {
 Vue.component('answer-item', {
   props: ['answer', 'scoreItem', 'answerIndex'],
   template: ' \
-    <div> \
-      Answer for {{scoreItem.name}} \
-      <div> \
+    <div class="answering"> \
+      <div class="main-design vertica-centering"> \
+        Answer for {{scoreItem.name}} \
+      </div> \
+      <div class="main-design vertica-centering"> \
         {{answer.quetion}} \
       </div> \
-      <div id="answer-list"> \
+      <div> \
         <button \
           v-for="(item, index) in answer.answers" \
           v-on:click="response(index)" \
+          class="main-design basic-button vertica-centering" \
         > \
           {{item}} \
         </button> \
