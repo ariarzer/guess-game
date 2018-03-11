@@ -6,4 +6,53 @@ body{
   justify-content: center;
   align-items: center;
   font-family: Arial;
+
+}
+
+button::-moz-focus-inner {
+  border: 0 !important;
+}
+
+.main-design{
+  background: #5BBBE4;
+  color: white;
+  border: 5px solid white;
+  font-size: 40px;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.registr{
+  display: flex;
+  font-size: 170px;
+}
+
+.registr_inputs{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-text{
+  padding: 5px;
+}
+
+.basic-button{
+  padding-bottom: 5px;
+}
+
+.registr_create-button{
+  font-size: 45px;
+}
+
+.vertica-centering{
+  padding: 5px;
+}
+
+.answering{
+  display: flex;
+  flex-direction: column;
+}
+
+.results{
+  display: flex;
 }

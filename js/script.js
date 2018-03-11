@@ -1,12 +1,19 @@
 Vue.component('registration-form', {
   props: ['score'],
   template: '\
-    <div> \
-      <div> \
-        <input v-for="item in score" v-model="item.name" v-bind:key="item.id" type="text" placeholder="What is your name?"> \
+    <div class="registr"> \
+      <div class="registr_inputs"> \
+        <input \
+          v-for="item in score" \
+          v-model="item.name" \
+          v-bind:key="item.id" \
+          type="text" \
+          placeholder="What is your name?" \
+          class="input-text main-design" \
+        > \
       </div> \
-      <button v-on:click="addTextArea()">+</button> \
-      <button v-on:click="exit()">start!</button> \
+      <button v-on:click="addTextArea()" class="registr_create-button main-design basic-button">+</button> \
+      <button v-on:click="exit()" class="registr_start-button main-design basic-button">start!</button> \
     </div>',
   data: function () {
     return {
@@ -42,15 +49,18 @@ Vue.component('registration-form', {
 Vue.component('answer-item', {
   props: ['answer', 'scoreItem', 'answerIndex'],
   template: ' \
-    <div> \
-      Answer for {{scoreItem.name}} \
-      <div> \
+    <div class="answering"> \
+      <div class="main-design vertica-centering"> \
+        Answer for {{scoreItem.name}} \
+      </div> \
+      <div class="main-design vertica-centering"> \
         {{answer.quetion}} \
       </div> \
-      <div id="answer-list"> \
+      <div> \
         <button \
           v-for="(item, index) in answer.answers" \
           v-on:click="response(index)" \
+          class="main-design basic-button vertica-centering" \
         > \
           {{item}} \
         </button> \
@@ -103,10 +113,12 @@ Vue.component('answering-form', {
 Vue.component('showing-results', {
   props: ['score', 'answer'],
   template: ' \
-    <div> \
+    <div class="results"> \
       <div v-for="team in score"> \
-        {{team.name}} \
-        <div v-for="score in team.report"> \
+        <div class="main-design vertica-centering"> \
+          {{team.name}} \
+        </div> \
+        <div v-for="score in team.report" class="main-design vertica-centering"> \
           {{answer[score.answerIndex].quetion}} : {{score.right}} \
         </div> \
       </div> \
