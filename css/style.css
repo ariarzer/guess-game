@@ -53,9 +53,38 @@ button::-moz-focus-inner {
   transition-duration:  0.5s;
 }
 
-.answering{
+.quetion{
   display: flex;
   flex-direction: column;
+  width: 1000px;
+}
+
+.quetion_title{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.quetion_answer-list{
+  display: flex;
+  justify-content: space-between;
+}
+
+.quetion_answer{
+  min-width: 200px;
+}
+
+.true{
+  border: 5px solid rgba(0,255,0,1);
+  transition-property: border;
+  transition-duration:  0.5s;
+}
+
+.error{
+  border: 5px solid rgba(255,0,0,1);
+  transition-property: border;
+  transition-duration:  0.5s;
 }
 
 .results{

@@ -49,29 +49,40 @@ Vue.component('registration-form', {
 Vue.component('answer-item', {
   props: ['answer', 'scoreItem', 'answerIndex'],
   template: ' \
-    <div class="answering"> \
-      <div class="main-design vertica-centering"> \
-        Вопрос для "{{scoreItem.name}}": \
+    <div class="quetion"> \
+      <div class="main-design quetion_title"> \
+        Вопрос для <span> {{scoreItem.name}}</span> \
       </div> \
-      <div class="main-design vertica-centering"> \
+      <div class="main-design"> \
         {{answer.quetion}} \
       </div> \
-      <div> \
+      <div class="quetion_answer-list"> \
         <button \
           v-for="(item, index) in answer.answers" \
           v-on:click="response(index)" \
-          class="main-design basic-button vertica-centering" \
+          class="main-design quetion_answer" \
+          v-bind:class="[{true: istrue(index)}, {error: iserror(index)}]" \
         > \
           {{item}} \
         </button> \
       </div> \
     </div>',
+  data: function () {
+    return {
+      end: false,
+    }
+  },
   methods: {
-    getButtonId: function(i) {return 'answer' + i.toString();},
     response: function(i) {
       this.scoreItem.report.push({answerIndex: this.answerIndex, right: (i == this.answer.trueAnswerIndex)});
-      this.$emit('step');
-    }
+      this.end = true;
+      this.checked = i;
+      console.log(this.checked);
+      setTimeout(this.exit, 4000);
+    },
+    exit: function() {this.$emit('step');},
+    istrue: function(i) {return ((i ==  this.answer.trueAnswerIndex) && this.end);},
+    iserror: function(i) {return ((i !=  this.answer.trueAnswerIndex) && this.end && (i == this.checked));}
   }
 });
 
@@ -124,7 +135,7 @@ Vue.component('showing-results', {
     result: function (team) {
       var result = 0;
       for(var i = 0; i < team.report.length; i++){
-        result += team.report[i].right;
+        result += +team.report[i].right;
       }
       return result;
     },
