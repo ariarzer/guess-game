@@ -1,5 +1,6 @@
 body{
   background-image: url("../images/night.png");
+  background-size: cover;
   height: 100vh;
   margin: 0px;
   display: flex;
