@@ -63,7 +63,6 @@ button::-moz-focus-inner {
   display: flex;
   align-items: center;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .quetion_answer-list{
@@ -89,4 +88,5 @@ button::-moz-focus-inner {
 
 .results{
   display: flex;
+  flex-direction: column;
 }
