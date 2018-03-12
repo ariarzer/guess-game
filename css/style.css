@@ -6,7 +6,6 @@ body{
   justify-content: center;
   align-items: center;
   font-family: Arial;
-
 }
 
 button::-moz-focus-inner {
@@ -14,17 +13,18 @@ button::-moz-focus-inner {
 }
 
 .main-design{
-  background: #5BBBE4;
+  background: rgba(74,112,70, 0.5);
   color: white;
-  border: 5px solid white;
+  border: none;
   font-size: 40px;
   margin: 10px;
   font-weight: bold;
+  padding: 10px;
 }
 
 .registr{
   display: flex;
-  font-size: 170px;
+  margin-bottom: 130px;
 }
 
 .registr_inputs{
@@ -33,19 +33,24 @@ button::-moz-focus-inner {
 }
 
 .input-text{
-  padding: 5px;
+  transition: padding 0.5s;
 }
 
-.basic-button{
-  padding-bottom: 5px;
+.input-text:focus{
+  padding: 15px;
+  transition: padding 0.5s;
 }
 
-.registr_create-button{
-  font-size: 45px;
+.registr_button{
+  transition-property: box-shadow, border-radius;
+  transition-duration:  0.5s;
 }
 
-.vertica-centering{
-  padding: 5px;
+.registr_button:hover{
+  box-shadow: 0 0 10px rgba(101,136,67,1);
+  border-radius: 10px;
+  transition-property: box-shadow, border-radius;
+  transition-duration:  0.5s;
 }
 
 .answering{

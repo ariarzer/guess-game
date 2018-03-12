@@ -12,8 +12,8 @@ Vue.component('registration-form', {
           class="input-text main-design" \
         > \
       </div> \
-      <button v-on:click="addTextArea()" class="registr_create-button basic-button main-design">+</button> \
-      <button v-on:click="exit()" class="registr_start-button basic-button main-design ">start!</button> \
+      <button v-on:click="addTextArea()" class="registr_button main-design">+</button> \
+      <button v-on:click="exit()" class="registr_button main-design">start!</button> \
     </div>',
   data: function () {
     return {
