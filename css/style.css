@@ -54,24 +54,24 @@ button::-moz-focus-inner {
   transition-duration:  0.5s;
 }
 
-.quetion{
+.question{
   display: flex;
   flex-direction: column;
   width: 1000px;
 }
 
-.quetion_title{
+.question_title{
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.quetion_answer-list{
+.question_answer-list{
   display: flex;
   justify-content: space-between;
 }
 
-.quetion_answer{
+.question_answer{
   min-width: 200px;
 }
 

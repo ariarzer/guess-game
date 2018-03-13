@@ -49,18 +49,18 @@ Vue.component('registration-form', {
 Vue.component('answer-item', {
   props: ['answer', 'scoreItem', 'answerIndex'],
   template: ' \
-    <div class="quetion"> \
-      <div class="main-design quetion_title"> \
+    <div class="qusetion"> \
+      <div class="main-design question_title"> \
         Вопрос для <span> {{scoreItem.name}}</span> \
       </div> \
       <div class="main-design"> \
-        {{answer.quetion}} \
+        {{answer.question}} \
       </div> \
-      <div class="quetion_answer-list"> \
+      <div class="question_answer-list"> \
         <button \
           v-for="(item, index) in answer.answers" \
           v-on:click="response(index)" \
-          class="main-design quetion_answer" \
+          class="main-design question_answer" \
           v-bind:class="[{true: istrue(index)}, {error: iserror(index)}]" \
         > \
           {{item}} \
@@ -147,7 +147,7 @@ var basic = new Vue({
   data: {
     render: [true, false, false],
     score: [{id: 0, name: '', report: []}],
-    answer: quetion,
+    answer: question,
   },
   methods: {
     renderStep: function(i) {
