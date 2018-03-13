@@ -78,7 +78,7 @@ Vue.component('answer-item', {
       this.end = true;
       this.checked = i;
       console.log(this.checked);
-      setTimeout(this.exit, 4000);
+      setTimeout(this.exit, 2000);
     },
     exit: function() {this.$emit('step');},
     istrue: function(i) {return ((i ==  this.answer.trueAnswerIndex) && this.end);},
