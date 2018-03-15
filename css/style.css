@@ -76,14 +76,17 @@ button::-moz-focus-inner {
 }
 
 .true{
-  border: 5px solid rgba(0,255,0,1);
-  transition-property: border;
+  position: relative;
+  font-size: 53px;
+  background: rgba(255,175,72, 0.6);
+  transition-property: font-size, background;
   transition-duration:  0.5s;
 }
 
 .error{
-  border: 5px solid rgba(255,0,0,1);
-  transition-property: border;
+  color: rgba(255,255,255,0.2);
+  background: rgba(10,102,62, 0.3);
+  transition-property: color, background;
   transition-duration:  0.5s;
 }
 
