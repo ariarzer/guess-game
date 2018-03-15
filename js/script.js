@@ -49,7 +49,7 @@ Vue.component('registration-form', {
 Vue.component('answer-item', {
   props: ['answer', 'scoreItem', 'answerIndex'],
   template: ' \
-    <div class="qusetion"> \
+    <div class="question"> \
       <div class="main-design question_title"> \
         Вопрос для <span> {{scoreItem.name}}</span> \
       </div> \
