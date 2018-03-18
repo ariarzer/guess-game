@@ -1,0 +1,13 @@
+{
+  "name": "guess-game",
+  "version": "1.0.0",
+  "description": "Guess Game",
+  "author": "Sofi Valitova <ariarzer@gmail.com>",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ariarzer/guess-game.git"
+  }
+}
