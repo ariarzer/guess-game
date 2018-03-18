@@ -7,4 +7,4 @@ The game takes place in three stages:
    * 30 seconds for each question
 3. showing the results
 
-You can see the **result** in [here](https://ariarzer.github.io/guess-game/).
+You can see the **result** in [here](https://ariarzer.github.io/guess-game/index.html).
