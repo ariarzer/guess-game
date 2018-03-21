@@ -7,29 +7,10 @@
 	<link href='css/style.css' rel='stylesheet'>
     </head>
     <body>
-	<div id='guess-game' class='guess-game'>
-	    <registration-form
-		v-if=render[0]
-		v-bind:score=score
-		v-on:i-finish='renderStep(0)'
-	    >
-	    </registration-form>
-	    <answering-form
-		v-if=render[1]
-		v-bind:score=score
-		v-bind:answer=answer
-		v-on:i-finish='renderStep(1)'
-	    >
-	    </answering-form>
-	    <showing-results
-		v-if=render[2]
-		v-bind:score=score
-		v-bind:answer=answer
-	    >
-	    </showing-results>
-	</div>
+
+	<div id='guess-game' class='guess-game'></div>
+
 	<script src='https://unpkg.com/vue'></script>
-	<script src='js/question.js'></script>
-    <script src='js/script.js'></script>
+	<script src='./js/build.js'></script>
     </body>
 </html>
