@@ -1,3 +1,5 @@
+const Vue = require('vue');
+
 module.exports = Vue.component('answer-item', {
   props: ['answer', 'scoreItem', 'answerIndex'],
   template: `

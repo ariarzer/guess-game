@@ -1,5 +1,3 @@
-const Vue = require('vue');
-
 require('./components/registr');
 require('./components/results');
 require('./components/answer/answer-form');

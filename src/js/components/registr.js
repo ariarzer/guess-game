@@ -1,3 +1,5 @@
+var Vue = require('vue');
+
 module.exports = Vue.component('registration-form', {
   props: ['score'],
   template: `
@@ -17,8 +19,9 @@ module.exports = Vue.component('registration-form', {
     </div>`,
   data: function () {
     return {
-      countTextArea: 1};
-    },
+      countTextArea: 1
+    };
+  },
   methods: {
     areEmpty: function(){
       for(var i = 0; i < this.score.length; i++){

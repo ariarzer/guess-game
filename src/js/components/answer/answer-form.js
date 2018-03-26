@@ -1,3 +1,4 @@
+const Vue = require('vue');
 require('./answer-item');
 
 module.exports = Vue.component('answer-form', {
