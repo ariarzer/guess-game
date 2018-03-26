@@ -1,6 +1,4 @@
-const Vue = require('vue');
-
-module.exports = Vue.component('answer-item', {
+const answerItem = {
   props: ['answer', 'scoreItem', 'answerIndex'],
   template: `
     <div class="question">
@@ -38,4 +36,6 @@ module.exports = Vue.component('answer-item', {
     istrue: function(i) {return ((i ==  this.answer.trueAnswerIndex) && this.end);},
     iserror: function(i) {return ((i !=  this.answer.trueAnswerIndex) && this.end && (i == this.checked));}
   }
-});
+};
+
+module.exports = answerItem;

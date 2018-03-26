@@ -1,11 +1,18 @@
-require('./components/registr');
-require('./components/results');
-require('./components/answer/answer-form');
+const Vue = require('vue');
+
+const registr = require('./components/registr');
+const results = require('./components/results');
+const answerForm = require('./components/answer/answer-form');
 
 var question = require('../../data/question.json');
 
 new Vue({
   el: '#guess-game',
+  components: {
+    'registration-form': registr,
+    'showing-results': results,
+    'answer-form': answerForm,
+  },
   data: {
     render: [true, false, false],
     score: [{id: 0, name: '', report: []}],

@@ -1,6 +1,4 @@
-const Vue = require('vue');
-
-module.exports = Vue.component('results', {
+const results = {
   props: ['score', 'answer'],
   template: `
     <div class="results">
@@ -19,4 +17,6 @@ module.exports = Vue.component('results', {
       return result;
     },
   },
-});
+};
+
+module.exports = results;

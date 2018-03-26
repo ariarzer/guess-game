@@ -1,7 +1,6 @@
-const Vue = require('vue');
 require('./answer-item');
 
-module.exports = Vue.component('answer-form', {
+const answerForm = {
   props: ['score','answer'],
   template: `
     <div>
@@ -34,4 +33,6 @@ module.exports = Vue.component('answer-form', {
       if(i == this.answer.length - 1) this.$emit('i-finish');
     }
   },
-});
+};
+
+module.exports = answerForm;

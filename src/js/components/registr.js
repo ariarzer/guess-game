@@ -1,6 +1,4 @@
-var Vue = require('vue');
-
-module.exports = Vue.component('registration-form', {
+const registr = {
   props: ['score'],
   template: `
     <div class="registr">
@@ -46,5 +44,7 @@ module.exports = Vue.component('registration-form', {
         alert("You can't add more players :(");
       }
     },
-  }
-});
+  },
+};
+
+module.exports = registr;
