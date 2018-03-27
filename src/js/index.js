@@ -1,4 +1,4 @@
-const Vue = require('vue');
+const Vue = require('vue/dist/vue.js');
 
 const registr = require('./components/registr');
 const results = require('./components/results');

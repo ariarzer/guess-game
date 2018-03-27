@@ -1,7 +1,10 @@
-require('./answer-item');
+const answerItem = require('./answer-item');
 
 const answerForm = {
   props: ['score','answer'],
+  components: {
+    'answer-item': answerItem,
+  },
   template: `
     <div>
       <div v-for="(item, index) in answer">
