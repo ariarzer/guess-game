@@ -4,7 +4,8 @@
   "description": "Guess Game",
   "author": "Sofi Valitova <ariarzer@gmail.com>",
   "scripts": {
-    "test": "exit 0"
+    "test": "exit 0",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
