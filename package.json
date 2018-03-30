@@ -4,10 +4,17 @@
   "description": "Guess Game",
   "author": "Sofi Valitova <ariarzer@gmail.com>",
   "scripts": {
-    "test": "exit 0"
+    "test": "exit 0",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ariarzer/guess-game.git"
+  },
+  "devDependencies": {
+    "webpack": "^3.11.0"
+  },
+  "dependencies": {
+    "vue": "^2.5.16"
   }
 }
