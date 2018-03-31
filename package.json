@@ -11,10 +11,20 @@
     "type": "git",
     "url": "git+https://github.com/ariarzer/guess-game.git"
   },
-  "devDependencies": {
-    "webpack": "^3.11.0"
-  },
   "dependencies": {
     "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.16.0",
+    "vue-loader": "^13.5.0",
+    "vue-template-compiler": "^2.5.9",
+    "webpack": "^3.9.0"
+  },
+  "babel": {
+    "presets": ["env"]
   }
 }

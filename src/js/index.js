@@ -1,10 +1,10 @@
-const Vue = require('vue/dist/vue.js');
+import Vue from 'vue/dist/vue.esm.js';
 
-const registr = require('./components/registr');
-const results = require('./components/results');
-const answerForm = require('./components/answer/answer-form');
+import registr from './components/registr.vue';
+import results from './components/results.vue';
+import answerForm from './components/answer/answer-form.vue';
 
-var question = require('../../data/question.json');
+import question from '../../data/question.json';
 
 new Vue({
   el: '#guess-game',
