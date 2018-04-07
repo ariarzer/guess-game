@@ -25,6 +25,8 @@
     "webpack": "^3.9.0"
   },
   "babel": {
-    "presets": ["env"]
+    "presets": [
+      "env"
+    ]
   }
 }

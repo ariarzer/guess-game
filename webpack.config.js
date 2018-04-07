@@ -1,5 +1,7 @@
+const path = require('path');
+
 module.exports = {
-  entry: './src/js/index.js',
+  entry: './src/index.js',
   output: {
     filename: './public/js/build.js',
   },
@@ -18,5 +20,10 @@ module.exports = {
         loaders: ['style-loader', 'css-loader']
       }
     ]
-  }
+  },
+  resolve: {
+    alias: {
+      '~': path.resolve(__dirname, './'),
+    },
+  },
 };
